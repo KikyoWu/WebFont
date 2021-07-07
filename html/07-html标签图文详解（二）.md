@@ -736,7 +736,7 @@ POST方式： 将表单数据直接发送(隐藏)到action指定的处理程序�
 
 **举例**：
 
-```
+```html
 	<form>
 		姓名：<input value="呵呵" >逗比<br>
 		昵称：<input value="哈哈" readonly=""><br>
@@ -792,7 +792,7 @@ select标签和ul、ol、dl一样，都是组标签。
 
 举例：
 
-```
+```html
 	<form>
 		<select>
 			<option>小学</option>
