@@ -1,0 +1,201 @@
+/* 不可少，否则相对定位有问题 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei";
+}
+
+body {
+    background-color: #DEDEDE;
+}
+
+/* 右侧不显示滚动条 */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+ol {
+    padding: 10px 0 0 53px;
+}
+
+ul {
+    margin-left: 10px;
+}
+
+ul li {
+    list-style: none;
+    padding: 5px;
+}
+
+figure{
+    border: 1px solid black;
+    border-collapse:collapse;
+    margin: 10px;
+    padding: 10px;
+    
+}
+
+figure .img{
+    text-align: center;
+}
+
+.header,
+.footer{
+    /* 做绝对定位的参考，子绝父相
+    不脱标，老家留坑
+    相对于自己原来的位置，进行位置调整 */
+    position: relative;
+    background-color: #333;
+
+}
+
+.footer{
+    text-align: center;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+table th{
+    background-color: #333;
+    color: white;
+}
+
+/* tr则每个列 */
+table tbody td{
+    border: 1px solid #CCCCCC;
+}
+
+/* `tr:last-child` 匹配tfoot中最后一个子元素tr。 */
+table tfoot tr:last-child {
+    background-color: #CCCCCC;
+    color: #333;
+}
+
+.header h1{
+    color: white;
+}
+
+.header .nav-links{
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    /* 让元素居中 */
+}
+
+/* 消除浮动 */
+.header .cl{
+    clear: both;
+}
+
+.header .nav-links li{
+    float: left;
+    list-style-type: none;
+    /* display: inline; */
+    /* 设置li而不是ul才能一行 */
+}
+
+.header .nav-links li a{
+    text-decoration: none;
+    /* 消除链接横线 */
+}
+
+.header .nav-links li a:link{
+    color: #999;
+}
+
+.header .nav-links li a:visited{
+    color: #999;
+}
+
+.header .nav-links li a:hover{
+    color: white;
+}
+
+.header .nav-links li a:active{
+    color: white;
+}
+
+/* header同级，前面加会找不到 */
+.article{
+    margin: 25px;
+    padding: 25px;
+    /* 水平偏移 垂直偏移 模糊程度 阴影大小 阴影颜色 */
+    box-shadow: 10px 10px 5px #888888;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.article h2,
+.article h3,
+.article span,
+.article p{
+    padding: 10px;
+}
+    
+.article h3 {
+    color: #706B71;
+    font-size: 1.1rem;
+}
+
+.article span {
+    color: #939393;
+    font-size: .8rem;
+}
+
+.article p{
+    /* 首行缩进2个汉字 */
+    text-indent: 2em;
+}
+
+.right-table{
+    margin-left: 50%;
+}
+
+.right-table li{
+    padding-top: 10px;
+}
+
+.right-table li select{
+    margin-right: 30px;
+}
+
+.right-table li label,h5{
+    display: inline-block;
+    width: 130px;
+    text-align: right;
+}
+
+/* 单选框大小 */
+.right-table li .uniqe{
+    width: 20px;
+}
+
+
+/* 和lable绑定了，需要在lable中设置class才会改变大小位置 */
+.right-table li .interest{
+    width: 40px;
+}
+
+.right-table li span{
+    display: block;
+    margin-left: 130px;
+}
+
+.confirm-btn{
+    display: block;
+    margin-left: -100%;
+    margin-top: 10px;
+    background-color: darkgreen;
+    width: 200%;
+    height: 30px;
+    border-radius: 15px;
+    color:white;
+}
+

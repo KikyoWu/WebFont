@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <style>
-    </style>
-</head>
-<body>
-    <div style="border: 1px solid #000;">
-        <div style="width: 100px;height: 100px;background: #eee;float: left;"></div>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .conten-box{
+               overflow: hidden;
+
+               overflow-y: scroll;
+
+               white-space: nowrap;
+
+               height:50px;
+
+               width:100%;
+
+            }
+
+            .conten-box::-webkit-scrollbar {
+                display: none;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="conten-box">
+
+            老板的手机收到一个红包，为什么红包没居中？<br>
+
+如何让一个子元素在父容器里**水平垂直居中**？这个问题必考，在实战开发中，也应用得非常多。<br>
+
+你也许能顺手写出好几种实现方法。但大部分人的写法不够规范，经不起千锤百炼。换句话说：这些人也就面试的时候夸夸其谈，但真的上战场的时候，他们不敢这么写，也不知道怎么写最靠谱。<br>
+
+这篇文章中，我们来列出几种常见的写法，最终你会明白，哪种写法是最优雅的。<br>
+
+当然，我还会拿出实际应用中的真实场景来举例，让你感受一下**标准垂直居中的魅力**。
+            
+        </div>
+    </body>
+</html>
+
