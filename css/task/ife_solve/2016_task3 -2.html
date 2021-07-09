@@ -10,11 +10,6 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
-
-    *{
-      margin: 0;
-      padding: 0;
-    }
     
     /* children div是要占满全屏的目标块级元素, 
     所以要对它自身和所有的父级元素设置 height:100%; */
@@ -40,38 +35,43 @@
 clear:both的意思就是：不允许左侧和右侧有浮动对象。
 这种方法所在标签margin属性失效了。
 在.left中添加clear:both后就消除浮动变成块元素，独占一行。 */
-
     .left{
       width: 100px;
       height: 100%;
       background: blue;
-      position: absolute;
-      left: 10px;
-      top: 10px;
+      float: left;
+      margin: 20px;
+      box-sizing: content-box;
     }
+
+    /* 一个浮动的元素，
+    如果没有设置width，那么将自动收缩为内容的宽度 */
+    /* 浮动的元素互相贴靠，所以right要在left后才依据
+    left位置向右浮动 */
     .right{
       width: 100px;
       height: 100%;
-      background: green;
-      position: absolute;
-      right: 10px;
-      top: 10px;
+      background: yellow;
+      float: right;
+      margin: 20px;
     }
 
-    /* 绝对定位也不在标准流中 */
+    /* center是标准流中的第一个盒子，渲染在页面的左上方
+    要设置margin=左右宽度才能在中间 */
     .center{
+        /* 只设置高度，所以宽度自适应内容 */
       height: 100%;
-      margin: 10px 120px;
+      /* 设置margin-top ,.left和.right一起动
+      .left和.right也设置margin和.mid内容高度在同一高度*/
+      margin: 10px 130px;
       background: red;
     }
-
 
     </style>
 </head>
 <body>
     <div class="left">我是左边栏</div>
-    <div class="center">我是中间内容</div>
     <div class="right">我是右边栏</div>
-
+    <div class="center">我是中间内容</div>
 </body>
 </html>

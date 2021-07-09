@@ -1,0 +1,64 @@
+/* flex布局，父盒子display: flex,中间自适应部分flex:1,两侧固定宽高 */
+
+/* 不可少，否则相对定位有问题 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei";
+}
+
+body {
+    background-color: #DEDEDE;
+}
+
+/* .wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 200px;
+    background-color: #ccc;
+} */
+
+/* 相对定位是相对于父对象定位，绝对定位是相对于当前位置定位
+相对定位，就两个作用：
+- （1）微调元素
+- （2）做绝对定位的参考，子绝父相 
+
+绝对定位脱离标准流,可以使用margin: auto;居中
+一个绝对定位的元素，如果父辈元素中也出现了已定位
+（无论是绝对定位、相对定位，还是固定定位）的元素，
+那么将以父辈这个元素，为参考点。*/
+.wrapper {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    height: 200px;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+.quater-circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #fc0;
+}
+
+.right-top {
+    border-radius: 0 0 50px 0;
+    top: 0px;
+    left: 0px;
+}
+
+.left-bottom {
+    bottom: 0px;
+    right: 0px;
+    border-radius: 50px 0 0 0;
+    border-left: transparent;
+}

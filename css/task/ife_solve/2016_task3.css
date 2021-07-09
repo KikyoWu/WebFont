@@ -1,0 +1,89 @@
+/* flex布局，父盒子display: flex,中间自适应部分flex:1,两侧固定宽高 */
+
+/* 不可少，否则相对定位有问题 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei";
+}
+
+body {
+    background-color: #DEDEDE;
+}
+
+.wrapper{
+    position: relative;
+    background-color: #eee;
+    margin: 20px;
+    padding:20px;
+    /* 设置伸缩布局*/
+    display: flex;
+    /* 设置主轴方向*/
+    /* flex-direction: row; */
+}
+
+.wrapper > .left_part,.mid_part,.right_part{
+    border: 1px solid #999;
+    background-color: rgb(240, 230, 230);
+    margin: 20px;
+    /* 相同时高度、间隔才一致 */
+}
+
+.left_part,.right-part{
+    display: inline-block;
+}
+
+.left_part{
+    /* 水平居中 */
+    text-align: center;
+    width: 300px;
+    height: 232px;
+    padding: 20px;
+}
+
+/* 正常情况下，图片和文字是底边对齐显示的
+vertical-align可以更改对齐方式 
+只在img中设置有效*/
+.left_part img{
+    margin:0px auto;
+    vertical-align: text-top; 
+}
+
+/* margin并不是父元素的，所以需要计算（父元素的高度-子元素高度）/2
+才能垂直居中 */
+
+.left_part span {
+    margin-left: 20px;
+}
+
+.right_part{
+    text-align: center;
+    width: 200px;
+    padding: 30px 0;
+    /* height:700px; */
+}
+
+.mid_part{
+    /* 不设置时中间不自适应 */
+    flex: 1;
+    padding: 20px;
+}
+
+.wrapper .mid_part p{
+    white-space: pre-wrap;
+}
+
+/* 固定父辈宽高后想再居中显示图片 */
+.right_part img{
+    margin:10px auto;
+}
+
+img {
+    transition: all 1s;
+}
+
+img:hover {
+    -webkit-transform: rotate3d(20, 20, 20, 360deg);
+    transform: rotate3d(20, 20, 20, 360deg);
+    transition: all 1s;
+}
