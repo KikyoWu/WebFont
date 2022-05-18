@@ -238,7 +238,7 @@ CSS样式中，常见的文本属性有以下几种：
 
 ## 列表属性
 
-```
+```html
 ul li{
 	list-style-image:url(images/2.gif) ;  /*列表项前设置为图片*/
 	margin-left:80px;  /*公有属性*/

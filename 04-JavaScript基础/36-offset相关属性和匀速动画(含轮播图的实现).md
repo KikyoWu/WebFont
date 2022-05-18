@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+- [36-offset相关属性和匀速动画(含轮播图的实现)](#36-offset相关属性和匀速动画含轮播图的实现)
+  - [前言](#前言)
+  - [offset 家族的组成](#offset-家族的组成)
+    - [1、offsetWidth 和 offsetHight](#1offsetwidth-和-offsethight)
+    - [2、offsetParent](#2offsetparent)
+    - [3、offsetLeft 和 offsetTop](#3offsetleft-和-offsettop)
+    - [offsetLeft 和 style.left 区别](#offsetleft-和-styleleft-区别)
+  - [动画的种类](#动画的种类)
+  - [匀速动画的封装：每间隔30ms，移动盒子10px【重要】](#匀速动画的封装每间隔30ms移动盒子10px重要)
+  - [代码举例：轮播图的实现](#代码举例轮播图的实现)
+
+=======
+>>>>>>> main
 # 36-offset相关属性和匀速动画(含轮播图的实现)
 
 ## 前言
